@@ -1,2 +1,2 @@
 // packages/app/src/plugins.ts
-export { argocdPlugin } from '@redhat/backstage-plugin-argo-cd';
+export { argocdPlugin } from '@roadiehq/backstage-plugin-argo-cd';
