@@ -37,7 +37,8 @@ integrations:
     - host: github.com
       # This is a Personal Access Token or PAT from GitHub. You can find out how to generate this token, and more information
       # about setting up the GitHub integration here: https://backstage.io/docs/integrations/github/locations#configuration
-      token: ${GITHUB_TOKEN}
+      #token: ${GITHUB_TOKEN}
+      token: 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
     ### Example for how to add your GitHub Enterprise instance using the API:
     # - host: ghe.example.net
     #   apiBaseUrl: https://ghe.example.net/api/v3
@@ -64,8 +65,8 @@ proxy:
     secure: false
     headers:
       Cookie:
-        $env: ARGOCD_AUTH_TOKEN
-        #$env: argocd.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhZG1pbjphcGlLZXkiLCJuYmYiOjE3Mzg1NTg5MzgsImlhdCI6MTczODU1ODkzOCwianRpIjoiMTYxM2M3MmMtMTEyMS00NmVmLTg2YjEtMTYxMDhmZmIyOTY4In0.5YpXQT029m_O08-k_hCz6mURoC5g9BoqWbFGeO1wPbw
+        #$env: ARGOCD_AUTH_TOKEN
+        $env: argocd.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhZG1pbjphcGlLZXkiLCJuYmYiOjE3Mzg1NTg5MzgsImlhdCI6MTczODU1ODkzOCwianRpIjoiMTYxM2M3MmMtMTEyMS00NmVmLTg2YjEtMTYxMDhmZmIyOTY4In0.5YpXQT029m_O08-k_hCz6mURoC5g9BoqWbFGeO1wPbw
 argocd:
   baseUrl: https://localhost:8080
 
