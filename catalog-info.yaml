@@ -7,6 +7,8 @@ metadata:
   # annotations:
   #   github.com/project-slug: backstage/backstage
   #   backstage.io/techdocs-ref: dir:.
+  annotations:
+    argocd/app-name: apache-app
 spec:
   type: website
   owner: john@example.com

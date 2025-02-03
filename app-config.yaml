@@ -55,6 +55,20 @@ proxy:
 # Note: After experimenting with basic setup, use CI/CD to generate docs
 # and an external cloud storage when deploying TechDocs for production use-case.
 # https://backstage.io/docs/features/techdocs/how-to-guides#how-to-migrate-from-techdocs-basic-to-recommended-deployment-approach
+
+  '/argocd/api':
+    # url to the api of your hosted argoCD instance
+    target: https://localhost:8080/api/v1/
+    changeOrigin: true
+    # this line is required if your hosted argoCD instance has self-signed certificate
+    secure: false
+    headers:
+      Cookie:
+        $env: ARGOCD_AUTH_TOKEN
+        #$env: argocd.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhZG1pbjphcGlLZXkiLCJuYmYiOjE3Mzg1NTg5MzgsImlhdCI6MTczODU1ODkzOCwianRpIjoiMTYxM2M3MmMtMTEyMS00NmVmLTg2YjEtMTYxMDhmZmIyOTY4In0.5YpXQT029m_O08-k_hCz6mURoC5g9BoqWbFGeO1wPbw
+argocd:
+  baseUrl: https://localhost:8080
+
 techdocs:
   builder: 'local' # Alternatives - 'external'
   generator:
