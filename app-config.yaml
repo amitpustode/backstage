@@ -66,7 +66,7 @@ proxy:
     headers:
       Cookie:
         #$env: ARGOCD_AUTH_TOKEN
-        $env: argocd.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhZG1pbjphcGlLZXkiLCJuYmYiOjE3Mzg1NTg5MzgsImlhdCI6MTczODU1ODkzOCwianRpIjoiMTYxM2M3MmMtMTEyMS00NmVmLTg2YjEtMTYxMDhmZmIyOTY4In0.5YpXQT029m_O08-k_hCz6mURoC5g9BoqWbFGeO1wPbw
+        $env: 'argocd.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhZG1pbjphcGlLZXkiLCJuYmYiOjE3Mzg1NTg5MzgsImlhdCI6MTczODU1ODkzOCwianRpIjoiMTYxM2M3MmMtMTEyMS00NmVmLTg2YjEtMTYxMDhmZmIyOTY4In0.5YpXQT029m_O08-k_hCz6mURoC5g9BoqWbFGeO1wPbw'
 argocd:
   baseUrl: https://localhost:8080
 
