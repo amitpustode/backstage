@@ -8,6 +8,12 @@
 
 import { createBackend } from '@backstage/backend-defaults';
 
+import kubernetes from './plugins/kubernetes';
+async function main() { 
+  // ...other definitions
+  const kubernetesEnv = useHotMemoize(module, () => createEnv('kubernetes'));
+  apiRouter.use('/kubernetes', await kubernetes(kubernetesEnv));
+
 const backend = createBackend();
 
 backend.add(import('@backstage/plugin-app-backend'));
