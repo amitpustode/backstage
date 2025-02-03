@@ -10,6 +10,6 @@ metadata:
   annotations:
     argocd/app-name: apache-app
 spec:
-  type: website
-  owner: john@example.com
-  lifecycle: experimental
+  type: service
+  owner: user:guest  
+  lifecycle: production
