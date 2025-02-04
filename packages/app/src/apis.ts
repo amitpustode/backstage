@@ -17,9 +17,3 @@ export const apis: AnyApiFactory[] = [
   }),
   ScmAuth.createDefaultApiFactory(),
 ];
-
-//argo
-import { argocdPlugin, ArgoCDPage } from '@roadiehq/backstage-plugin-argo-cd';
-<Route path="/argocd" element={<ArgoCDPage />} />;
-import ArgoIcon from '@material-ui/icons/Cloud';
-<SidebarItem icon={ArgoIcon} to="/argocd" text="ArgoCD" />;
