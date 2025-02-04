@@ -63,10 +63,9 @@ proxy:
     # this line is required if your hosted argoCD instance has self-signed certificate
     secure: false
     headers:
-      # headers:
-      #   Authorization: Bearer ${ARGOCD_AUTH_TOKEN}
-     Cookie:
-        $env: ARGOCD_AUTH_TOKEN  
+     Cookie: "argocd.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhZG1pbjphcGlLZXkiLCJuYmYiOjE3Mzg2NTYyMzIsImlhdCI6MTczODY1NjIzMiwianRpIjoiMzFhZWU2ZWEtY2FjMy00Mjk0LWI3MjUtZmU1N2Y0Yzg5YmIxIn0.dp0udDQ7ofkeIV7DR2NHgSmMemZVbSWZyOgYTZumZdw"
+        #$env: ARGOCD_AUTH_TOKEN 
+         
 argocd:
   baseUrl: https://localhost:8080
   
