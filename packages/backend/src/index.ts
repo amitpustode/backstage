@@ -53,3 +53,14 @@ backend.add(import('@backstage/plugin-search-backend-module-techdocs'));
 backend.add(import('@backstage/plugin-kubernetes-backend'));
 
 backend.start();
+
+//argocd
+import { createRouter } from '@roadiehq/backstage-plugin-argocd-backend';
+async function main() {
+  const argocdRouter = await createRouter({
+    logger,
+    config,
+  });
+
+  apiRouter.use('/argocd', argocdRouter);
+}
