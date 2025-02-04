@@ -7,14 +7,6 @@
  */
 
 import { createBackend } from '@backstage/backend-defaults';
-import { createBackendModule } from '@backstage/backend-plugin-api';
-
-import kubernetes from './plugins/kubernetes';
-
-async function main() {
-  const kubernetesEnv = useHotMemoize(module, () => createEnv('kubernetes'));
-  apiRouter.use('/kubernetes', await kubernetes(kubernetesEnv));
-}
 
 const backend = createBackend();
 
@@ -59,5 +51,6 @@ backend.add(import('@backstage/plugin-search-backend-module-techdocs'));
 
 // kubernetes
 backend.add(import('@backstage/plugin-kubernetes-backend'));
+backend.add(import('@backstage/plugin-kubernetes-backend/alpha'));
 
 backend.start();
