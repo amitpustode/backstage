@@ -10,16 +10,16 @@ spec:
   owner: user:guest  
   lifecycle: production
 
-# ---
+---
 
-# apiVersion: backstage.io/v1alpha1
-# kind: Component
-# metadata:
-#   name: my-app
-#   description: An example of a Backstage application.
-#   annotations:
-#     argocd/app-name: my-app
-# spec:
-#   type: service
-#   owner: user:guest  
-#   lifecycle: production
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: my-app
+  description: An example of a Backstage application.
+  annotations:
+    argocd/app-name: my-app
+spec:
+  type: service
+  owner: user:guest  
+  lifecycle: production
