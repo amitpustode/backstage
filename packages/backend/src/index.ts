@@ -12,7 +12,11 @@ import kubernetes from './plugins/kubernetes';
 // import { useHotMemoize } from '@backstage/backend-common';
 // import { DefaultEnvironment } from '@backstage/backend-common';
 // const kubernetesEnv = useHotMemoize(module, () => DefaultEnvironment.create());
-apiRouter.use('/kubernetes', await kubernetes(kubernetesEnv));
+//apiRouter.use('/kubernetes', await kubernetes(kubernetesEnv));
+async function main() {
+  const kubernetesEnv = await kubernetes(kubernetesEnv);
+  apiRouter.use('/kubernetes', kubernetesEnv);
+
 
 const backend = createBackend();
 
