@@ -161,14 +161,14 @@ const overviewContent = (
       </EntitySwitch.Case>
     </EntitySwitch>
 
-    <EntitySwitch>
+    {/* <EntitySwitch>
       <EntitySwitch.Case if={isHarborAvailable}>
         <Grid item>
           <EntityHarborWidgetCard/>
         </Grid>
       </EntitySwitch.Case>
-    </EntitySwitch>
-    
+    </EntitySwitch> */}
+
   </Grid>  
 );
 
