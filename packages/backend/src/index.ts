@@ -62,15 +62,15 @@ backend.add(import('@backstage/plugin-kubernetes-backend'));
 //   apiRouter.use('/kubernetes', kubernetesEnv);
 // }  
 //
-import kubernetes from './plugins/kubernetes';
-const kubernetesEnv = useHotMemoize(module, () => createEnv('kubernetes'));
-apiRouter.use('/kubernetes', await kubernetes(kubernetesEnv));
+// import kubernetes from './plugins/kubernetes';
+// const kubernetesEnv = useHotMemoize(module, () => createEnv('kubernetes'));
+// apiRouter.use('/kubernetes', await kubernetes(kubernetesEnv));
 //======================
-// async function main() {
-//   const backend = createBackend(); 
-//   const kubernetesEnv = await kubernetes(); 
-//   backend.add(kubernetesEnv); 
-//   await backend.start();
-// }
+async function main() {
+  const backend = createBackend(); 
+  const kubernetesEnv = await kubernetes(); 
+  backend.add(kubernetesEnv); 
+  await backend.start();
+}
 //======================
 backend.start();
