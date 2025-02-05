@@ -1,16 +1,16 @@
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: apache-app
-  description: An example of a Backstage application.
-  annotations:
-    argocd/app-name: apache-app
-    backstage.io/kubernetes-id: my-app
-  type: service
-  owner: user:guest  
-  lifecycle: production
+# apiVersion: backstage.io/v1alpha1
+# kind: Component
+# metadata:
+#   name: apache-app
+#   description: An example of a Backstage application.
+#   annotations:
+#     argocd/app-name: apache-app
+#     backstage.io/kubernetes-id: my-app
+#   type: service
+#   owner: user:guest  
+#   lifecycle: production
 
----
+# ---
 
 apiVersion: backstage.io/v1alpha1
 kind: Component
