@@ -9,8 +9,6 @@ metadata:
   type: service
   owner: user:guest  
   lifecycle: production
-  providesApis: []
-  consumesApis: []
 
 ---
 
