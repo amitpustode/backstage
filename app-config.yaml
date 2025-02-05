@@ -127,7 +127,7 @@ kubernetes:
   clusterLocatorMethods:
     - type: 'config'
       clusters:
-        - url: https://kubernetes.default.svc.cluster.local:443
+        - url: https://192.168.49.2:8443
           name: minikube
           authProvider: 'serviceAccount'
           skipTLSVerify: false
