@@ -5,7 +5,7 @@ metadata:
   description: An example of a Backstage application.
   annotations:
     argocd/app-name: apache-app
-    backstage.io/kubernetes-id: my-app
+    backstage.io/kubernetes-id: apache-app
   type: service
   owner: user:guest  
   lifecycle: production
@@ -19,7 +19,7 @@ metadata:
   description: An example of a Backstage application.
   annotations:
     argocd/app-name: my-app
-    backstage.io/kubernetes-id: my-app-service
+    backstage.io/kubernetes-id: my-app
 spec:
   type: service
   owner: user:guest  
