@@ -8,19 +8,6 @@
 
 import { createBackend } from '@backstage/backend-defaults';
 
-// import kubernetes from './plugins/kubernetes';
-// import { useHotMemoize } from '@backstage/backend-common';
-// import { DefaultEnvironment } from '@backstage/backend-common';
-// const kubernetesEnv = useHotMemoize(module, () => DefaultEnvironment.create());
-//apiRouter.use('/kubernetes', await kubernetes(kubernetesEnv));
-async function main() {
-  const kubernetesEnv = await kubernetes(kubernetesEnv);
-  apiRouter.use('/kubernetes', kubernetesEnv);
-}  
-//
-backend.add(import('@backstage/plugin-kubernetes-backend/alpha'));
-
-
 const backend = createBackend();
 
 backend.add(import('@backstage/plugin-app-backend'));
@@ -64,5 +51,27 @@ backend.add(import('@backstage/plugin-search-backend-module-techdocs'));
 
 // kubernetes
 backend.add(import('@backstage/plugin-kubernetes-backend'));
+//======================
+// import kubernetes from './plugins/kubernetes';
+// import { useHotMemoize } from '@backstage/backend-common';
+// import { DefaultEnvironment } from '@backstage/backend-common';
+// const kubernetesEnv = useHotMemoize(module, () => DefaultEnvironment.create());
+//apiRouter.use('/kubernetes', await kubernetes(kubernetesEnv));
+// async function main() {
+//   const kubernetesEnv = await kubernetes(kubernetesEnv);
+//   apiRouter.use('/kubernetes', kubernetesEnv);
+// }  
+//
+async function main() {
+  const backend = createBackend(); // ✅ Initialize backend first
 
+  const kubernetesEnv = await kubernetes(); // ✅ Pass correct parameters
+  backend.add(kubernetesEnv); // ✅ Now 'backend' is initialized before use
+
+  await backend.start(); // ✅ Ensure backend starts
+}
+
+
+
+//======================
 backend.start();
