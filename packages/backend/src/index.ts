@@ -16,6 +16,7 @@ import { createBackend } from '@backstage/backend-defaults';
 async function main() {
   const kubernetesEnv = await kubernetes(kubernetesEnv);
   apiRouter.use('/kubernetes', kubernetesEnv);
+}  
 //
 backend.add(import('@backstage/plugin-kubernetes-backend/alpha'));
 
