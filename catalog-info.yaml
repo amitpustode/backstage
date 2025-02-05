@@ -20,6 +20,7 @@ metadata:
   annotations:
     argocd/app-name: my-app
     backstage.io/kubernetes-id: my-app
+    goharbor.io/repository-slug: briandesousa/backstage-sample-service
 spec:
   type: service
   owner: user:guest  
@@ -35,6 +36,7 @@ metadata:
   annotations:
     argocd/app-name: my-kubernetes-component
     backstage.io/kubernetes-id: my-kubernetes-component
+    goharbor.io/repository-slug: briandesousa/backstage-sample-service
 spec:
   type: service
   owner: user:guest  
