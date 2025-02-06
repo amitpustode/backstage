@@ -75,10 +75,10 @@ async function main() {
 //======================
 backend.start();
 
-// //harbor
-// import harbor from './plugins/harbor';
-// async function main() {
-//   // tip: add the route to the apiRouter before the apiRouter is added to the service to ensure your API routes are available
-//   const harborEnv = useHotMemoize(module, () => createEnv('harbor'));
-//   apiRouter.use('/harbor', await harbor(harborENv));
-// }
+//harbor
+import harbor from './plugins/harbor';
+async function main() {
+  // tip: add the route to the apiRouter before the apiRouter is added to the service to ensure your API routes are available
+  const harborEnv = useHotMemoize(module, () => createEnv('harbor'));
+  apiRouter.use('/harbor', await harbor(harborENv));
+}

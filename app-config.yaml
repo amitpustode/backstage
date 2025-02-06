@@ -139,10 +139,8 @@ permission:
   # setting this to `false` will disable permissions
   enabled: true
 
-# ##Harbor
-# harbor:
-#   baseUrl: http://localhost
-#   username: admin
-#     #$env: HARBOR_USERNAME
-#   password: kbc@7588
-#     #$env: HARBOR_PASSWORD
+##Harbor
+harbor:
+  baseUrl: http://localhost
+  username: admin
+  password: Kbc@7588

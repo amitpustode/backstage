@@ -146,7 +146,6 @@ const overviewContent = (
     <Grid item md={6} xs={12}>
       <EntityCatalogGraphCard variant="gridItem" height={400} />
     </Grid>
-
     <Grid item md={4} xs={12}>
       <EntityLinksCard />
     </Grid>
@@ -160,6 +159,15 @@ const overviewContent = (
         </Grid>
       </EntitySwitch.Case>
     </EntitySwitch>   
+    
+    <EntitySwitch>
+      <EntitySwitch.Case if={isHarborAvailable}>
+        <Grid item>
+          <EntityHarborWidgetCard/>
+        </Grid>
+      </EntitySwitch.Case>
+    </EntitySwitch>
+
   </Grid>  
 );
 
@@ -175,6 +183,10 @@ const serviceEntityPage = (
 
     <EntityLayout.Route path="/kubernetes" title="Kubernetes" if={isKubernetesAvailable}>
       <EntityKubernetesContent refreshIntervalMs={30000} />
+    </EntityLayout.Route>
+
+    <EntityLayout.Route path="/harbor" title="Harbor">
+      <EntityHarborContent />
     </EntityLayout.Route>
 
     <EntityLayout.Route path="/api" title="API">
