@@ -52,7 +52,7 @@ metadata:
   annotations:
     argocd/app-name: awesome-app
     backstage.io/kubernetes-id: awesome-app
-    goharbor.io/repository-slug: localhost/library
+    goharbor.io/repository-slug: localhost/prod-cr/alpine
 spec:
   type: service
   owner: user:guest  

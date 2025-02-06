@@ -143,4 +143,4 @@ permission:
 harbor:
   baseUrl: http://localhost
   username: admin
-  password: Kbc@7588
+  password: kbc@7588
