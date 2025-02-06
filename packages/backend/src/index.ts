@@ -89,15 +89,19 @@ import harbor from './plugins/harbor';
 import { createBackend } from '@backstage/backend-app-api';
 import { useHotMemoize } from '@backstage/backend-common';
 
-const backend = createBackend();
+let backend;
 
 async function main() {
-  const harborEnv = useHotMemoize(module, () => createEnv('harbor'));
-  const harborPlugin = await harbor(harborEnv);
+  if (!backend) {
+    backend = createBackend();
+    
+    const harborEnv = useHotMemoize(module, () => createEnv('harbor'));
+    const harborPlugin = await harbor(harborEnv);
 
-  backend.add(import('@bestsellerit/backstage-plugin-harbor-backend'));
+    backend.add(import('@bestsellerit/backstage-plugin-harbor-backend'));
 
-  await backend.start();
+    await backend.start();
+  }
 }
 
 main().catch(err => {
