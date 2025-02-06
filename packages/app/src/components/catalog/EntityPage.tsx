@@ -67,7 +67,8 @@ import {
 import {
   EntityHarborContent,
   EntityHarborWidgetCard,
-  isHarborAvailable
+  isHarborAvailable,
+  Router as HarborRouter
 } from '@bestsellerit/backstage-plugin-harbor';
 
 const techdocsContent = (
