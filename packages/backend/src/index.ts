@@ -83,24 +83,12 @@ backend.start();
 //   apiRouter.use('/harbor', await harbor(harborENv));
 // }
 
-// backend.add(import('@bestsellerit/backstage-plugin-harbor-backend'));
-
+//backend.add(import('@bestsellerit/backstage-plugin-harbor-backend'));
 import harbor from './plugins/harbor';
-import { createBackend } from '@backstage/backend-app-api';
-import { useHotMemoize } from '@backstage/backend-common';
-
-const backend = createBackend(); // Ensure it's only declared once
-
+// ...
 async function main() {
+  // ...
   const harborEnv = useHotMemoize(module, () => createEnv('harbor'));
-  const harborPlugin = await harbor(harborEnv);
+  apiRouter.use('/harbor', await harborusage(harborEnv));
+}  
 
-  backend.add(import('@bestsellerit/backstage-plugin-harbor-backend'));
-
-  await backend.start();
-}
-
-main().catch(err => {
-  console.error('Backend failed to start', err);
-  process.exit(1);
-});

@@ -5,7 +5,7 @@ import { PluginEnvironment } from '../types';
 
 export default async function createPlugin({
   logger,
-  config
+  config,
 }: PluginEnvironment): Promise<Router> {
   return await createRouter({ logger, config });
 }

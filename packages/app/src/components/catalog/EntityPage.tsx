@@ -65,11 +65,10 @@ import {
 } from '@roadiehq/backstage-plugin-argo-cd';
 
 import {
-  EntityHarborContent,
-  EntityHarborWidgetCard,
+  HarborPage,
+  HarborWidget,
   isHarborAvailable,
-  Router as HarborRouter
-} from '@bestsellerit/backstage-plugin-harbor';
+} from '@bestsellerit/backstage-plugin-harbor'
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -164,7 +163,7 @@ const overviewContent = (
     <EntitySwitch>
       <EntitySwitch.Case if={isHarborAvailable}>
         <Grid item>
-          <EntityHarborWidgetCard/>
+          <HarborWidget />
         </Grid>
       </EntitySwitch.Case>
     </EntitySwitch>
@@ -186,8 +185,8 @@ const serviceEntityPage = (
       <EntityKubernetesContent refreshIntervalMs={30000} />
     </EntityLayout.Route>
 
-    <EntityLayout.Route path="/harbor" title="Harbor">
-      <EntityHarborContent />
+    <EntityLayout.Route path="/harbor" title="Harbor" if={isHarborAvailable}>
+      <HarborPage />
     </EntityLayout.Route>
 
     <EntityLayout.Route path="/api" title="API">
