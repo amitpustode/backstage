@@ -128,8 +128,8 @@ kubernetes:
     - type: 'config'
       clusters:
         - url: https://kubernetes.default.svc.cluster.local:443
-        #- url: https://192.168.49.2:8443
-        #- url: https://127.0.0.1:32771
+        - url: https://192.168.49.2:8443
+        - url: https://127.0.0.1:32771
           name: minikube
           authProvider: 'serviceAccount'
           skipTLSVerify: true
