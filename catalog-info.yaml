@@ -51,7 +51,7 @@ metadata:
   description: An example of a Backstage application.
   annotations:
     argocd/app-name: awesome-app
-    backstage.io/kubernetes-id: awesome-app
+    backstage.io/kubernetes-id: default
     #goharbor.io/repository-slug: localhost/library
 spec:
   type: service
