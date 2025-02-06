@@ -41,3 +41,19 @@ spec:
   type: service
   owner: user:guest  
   lifecycle: production
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: awesome-app
+  description: An example of a Backstage application.
+  annotations:
+    argocd/app-name: awesome-app
+    backstage.io/kubernetes-id: awesome-app
+    #goharbor.io/repository-slug: localhost/library
+spec:
+  type: service
+  owner: user:guest  
+  lifecycle: Dev  
