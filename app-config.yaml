@@ -141,6 +141,6 @@ permission:
 
 ##Harbor
 harbor:
-  baseUrl: http://localhost:80
+  baseUrl: http://localhost
   username: admin
   password: Kbc@758877
