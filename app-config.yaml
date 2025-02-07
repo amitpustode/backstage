@@ -133,9 +133,16 @@ permission:
 #   username: admin
 #   password: Kbc@758877
 
+  # harbor:
+  # instances:
+  #   - host: localhost
+  #     username: "admin"
+  #     password: "Kbc@758877"
+  #     baseUrl: http://localhost
+
   harbor:
-  instances:
-    - host: localhost
-      username: "admin"
-      password: "Kbc@758877"
-      baseUrl: http://localhost
+    baseUrl: http://localhost
+    username: 
+      $env: admin
+    password:
+      $env: Kbc@758877    
