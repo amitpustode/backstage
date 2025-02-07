@@ -127,22 +127,22 @@ permission:
   # setting this to `false` will disable permissions
   enabled: true
 
-##Harbor
-# harbor:
-#   baseUrl: http://localhost
-#   username: admin
-#   password: Kbc@758877
+#Harbor
+harbor:
+  baseUrl: http://localhost
+  username: admin
+  password: Admin@123
 
   # harbor:
   # instances:
   #   - host: localhost
   #     username: "admin"
-  #     password: "Kbc@758877"
+  #     password: "Admin@123"
   #     baseUrl: http://localhost
 
-  harbor:
-    baseUrl: http://localhost
-    username: 
-      $env: admin
-    password:
-      $env: Kbc@758877    
+  # harbor:
+  #   baseUrl: http://localhost
+  #   username: 
+  #     $env: admin
+  #   password:
+  #     $env: Admin@123    

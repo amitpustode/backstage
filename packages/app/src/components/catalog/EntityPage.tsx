@@ -64,17 +64,17 @@ import {
   isArgocdAvailable
 } from '@roadiehq/backstage-plugin-argo-cd';
 
-// import {
-//   HarborPage,
-//   HarborWidget,
-//   isHarborAvailable,
-// } from '@bestsellerit/backstage-plugin-harbor'
-
 import {
   HarborPage,
   HarborWidget,
   isHarborAvailable,
-} from '@digitalist-open-cloud/backstage-plugin-harbor'
+} from '@bestsellerit/backstage-plugin-harbor'
+
+// import {
+//   HarborPage,
+//   HarborWidget,
+//   isHarborAvailable,
+// } from '@digitalist-open-cloud/backstage-plugin-harbor'
 
 const techdocsContent = (
   <EntityTechdocsContent>
