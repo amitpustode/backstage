@@ -36,7 +36,7 @@ metadata:
   annotations:
     argocd/app-name: my-kubernetes-component
     backstage.io/kubernetes-id: my-kubernetes-component
-    goharbor.io/repository-slug: localhost/projects/prod-cr/alpine
+    goharbor.io/repository-slug: localhost/projects/library/nginx
 spec:
   type: service
   owner: user:guest  
