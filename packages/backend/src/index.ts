@@ -51,28 +51,14 @@ backend.add(import('@backstage/plugin-search-backend-module-techdocs'));
 
 // kubernetes
 backend.add(import('@backstage/plugin-kubernetes-backend'));
-//======================
-// import kubernetes from './plugins/kubernetes';
-// import { useHotMemoize } from '@backstage/backend-common';
-// import { DefaultEnvironment } from '@backstage/backend-common';
-// const kubernetesEnv = useHotMemoize(module, () => DefaultEnvironment.create());
-// apiRouter.use('/kubernetes', await kubernetes(kubernetesEnv));
-// async function main() {
-//   const kubernetesEnv = await kubernetes(kubernetesEnv);
-//   apiRouter.use('/kubernetes', kubernetesEnv);
-// }  
-//
-// import kubernetes from './plugins/kubernetes';
-// const kubernetesEnv = useHotMemoize(module, () => createEnv('kubernetes'));
-// apiRouter.use('/kubernetes', await kubernetes(kubernetesEnv));
-//======================
+
 async function main() {
   const backend = createBackend(); 
   const kubernetesEnv = await kubernetes(); 
   backend.add(kubernetesEnv); 
   await backend.start();
 }
-//======================
+
 backend.start();
 
 // //harbor
