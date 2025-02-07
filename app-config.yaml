@@ -128,7 +128,14 @@ permission:
   enabled: true
 
 ##Harbor
-harbor:
-  baseUrl: http://localhost
-  username: admin
-  password: Kbc@758877
+# harbor:
+#   baseUrl: http://localhost
+#   username: admin
+#   password: Kbc@758877
+
+  harbor:
+  instances:
+    - host: localhost
+      username: "admin"
+      password: "Kbc@758877"
+      baseUrl: http://localhost
