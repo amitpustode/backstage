@@ -52,11 +52,11 @@ metadata:
   annotations:
     argocd/app-name: awesome-app
     backstage.io/kubernetes-id: awesome-app
-    #goharbor.io/repository-slug: http://localhost/api/v2.0/projects/prod-cr/repositories/nginx #xdlocalhost/prod-cr/nginx
+    #goharbor.io/repository-slug: http://localhost/api/v2.0/projects/prod-cr/repositories/nginx
     #goharbor.io/repository-slug: project/repository
     #goharbor.io/repository-slug: localhost/project/repository
     goharbor.io/repository-slug: prod-cr/awesome-app
-    
+    goharbor.io/repository-slug: prod-cr/nginx   
 spec:
   type: service
   owner: user:guest  
