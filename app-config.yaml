@@ -132,6 +132,7 @@ harbor:
   baseUrl: http://localhost
   username: admin
   password: Admin@123
+  allowInsecure: false
 
   # harbor:
   # instances:
