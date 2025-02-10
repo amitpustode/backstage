@@ -59,7 +59,7 @@ metadata:
     #goharbor.io/repository-slug: prod-cr/nginx   
     #goharbor.io/repository-slug: prod-cr/my-image
     harbor.io/project: prod-cr  # Harbor project name
-    harbor.io/repository: alpine, nginx  # List of repositories
+    harbor.io/repository: prod-cr/alpine, prod-cr/nginx  # List of repositories
 spec:
   type: service
   owner: user:guest  
