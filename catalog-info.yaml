@@ -56,7 +56,7 @@ metadata:
     #goharbor.io/repository-slug: project/repository
     #goharbor.io/repository-slug: localhost/project/repository
     #goharbor.io/repository-slug: prod-cr/awesome-app
-    goharbor.io/repository-slug: localhost/prod-cr/nginx   
+    goharbor.io/repository-slug: prod-cr/nginx   
     #goharbor.io/repository-slug: prod-cr/my-image
     #harbor.io/project: prod-cr  # Harbor project name
     #harbor.io/repository: prod-cr/alpine, prod-cr/nginx  # List of repositories
