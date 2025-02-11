@@ -70,12 +70,11 @@ backend.start();
 // }
 
 //backend.add(import('@bestsellerit/backstage-plugin-harbor-backend'));
+//backend.add(import('@digitalist-open-cloud/backstage-plugin-harbor-backend'));
 import harbor from './plugins/harbor';
 // ...
 async function main() {
   // ...
   const harborEnv = useHotMemoize(module, () => createEnv('harbor'));
   apiRouter.use('/harbor', await harborusage(harborEnv));
-}  
-
-
+}
